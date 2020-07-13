@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,10 +20,10 @@ function App(props) {
     <Grid container direction="column">
       <Grid item xs={12}><Header/></Grid>
       <Grid item container xs={12}>
-        <Router history={history}>
+        <Router history={history} basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route path={process.env.PUBLIC_URL + "/"} component={Home} exact />
-            <Route path={process.env.PUBLIC_URL + "/favorites"} component={Favorites} exact />
+            <Route path="/" component={Home} exact />
+            <Route path="/favorites" component={Favorites} exact />
           </Switch>
         </Router>
       </Grid>
