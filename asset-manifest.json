@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/Alon-Tal-07-07-2020/static/js/main.4a534ac1.chunk.js",
-    "main.js.map": "/Alon-Tal-07-07-2020/static/js/main.4a534ac1.chunk.js.map",
-    "runtime-main.js": "/Alon-Tal-07-07-2020/static/js/runtime-main.aeaf3be1.js",
-    "runtime-main.js.map": "/Alon-Tal-07-07-2020/static/js/runtime-main.aeaf3be1.js.map",
-    "static/js/2.019e7d12.chunk.js": "/Alon-Tal-07-07-2020/static/js/2.019e7d12.chunk.js",
-    "static/js/2.019e7d12.chunk.js.map": "/Alon-Tal-07-07-2020/static/js/2.019e7d12.chunk.js.map",
+    "main.js": "/Alon-Tal-07-07-2020/static/js/main.cca3219f.chunk.js",
+    "main.js.map": "/Alon-Tal-07-07-2020/static/js/main.cca3219f.chunk.js.map",
+    "runtime-main.js": "/Alon-Tal-07-07-2020/static/js/runtime-main.369b9005.js",
+    "runtime-main.js.map": "/Alon-Tal-07-07-2020/static/js/runtime-main.369b9005.js.map",
+    "static/js/2.c079de4c.chunk.js": "/Alon-Tal-07-07-2020/static/js/2.c079de4c.chunk.js",
+    "static/js/2.c079de4c.chunk.js.map": "/Alon-Tal-07-07-2020/static/js/2.c079de4c.chunk.js.map",
     "index.html": "/Alon-Tal-07-07-2020/index.html",
-    "precache-manifest.77709df525d007b7b42aacc860662f7a.js": "/Alon-Tal-07-07-2020/precache-manifest.77709df525d007b7b42aacc860662f7a.js",
+    "precache-manifest.faf0bc9d9618bf5ad15c33ca44ed7996.js": "/Alon-Tal-07-07-2020/precache-manifest.faf0bc9d9618bf5ad15c33ca44ed7996.js",
     "service-worker.js": "/Alon-Tal-07-07-2020/service-worker.js",
-    "static/js/2.019e7d12.chunk.js.LICENSE.txt": "/Alon-Tal-07-07-2020/static/js/2.019e7d12.chunk.js.LICENSE.txt",
+    "static/js/2.c079de4c.chunk.js.LICENSE.txt": "/Alon-Tal-07-07-2020/static/js/2.c079de4c.chunk.js.LICENSE.txt",
     "static/media/NeueHaasDisplay-Roman.woff": "/Alon-Tal-07-07-2020/static/media/NeueHaasDisplay-Roman.127d6b3d.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.aeaf3be1.js",
-    "static/js/2.019e7d12.chunk.js",
-    "static/js/main.4a534ac1.chunk.js"
+    "static/js/runtime-main.369b9005.js",
+    "static/js/2.c079de4c.chunk.js",
+    "static/js/main.cca3219f.chunk.js"
   ]
 }
