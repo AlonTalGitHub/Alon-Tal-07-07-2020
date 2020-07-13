@@ -22,7 +22,7 @@ function App(props) {
       <Grid item container xs={12}>
         <Router history={history} basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route path="/#/favorites" component={Favorites} exact />
+            <Route path="/favorites" component={Favorites} exact />
             <Route path="/" component={Home} exact />
           </Switch>
         </Router>
