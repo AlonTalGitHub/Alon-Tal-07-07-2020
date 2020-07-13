@@ -44,8 +44,6 @@ const Content = (props) => {
 
   const handleFavorites = () => {
     const favorites = localService.query()
-    console.log(city)
-    console.log(favorites)
     if(isFavoriteFound(favorites)) {
       localService.remove(city.Key)
     } else {

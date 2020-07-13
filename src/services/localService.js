@@ -10,7 +10,6 @@ export default {
 
 function query() {
     const favorites = StorageService.query('favorites')
-    console.log(favorites);
     if (favorites.length === 0) {
         return StorageService.postMany('favorites', favorites)
     } else {

@@ -60,18 +60,6 @@ export function setDefaultCity() {
   };
 }
 
-export function setDefaultCurrentWeather() {
-  return (dispatch) => {
-    dispatch(_updateCurrentWeather(weatherService.getDefaultCurrentWeather()));
-  };
-}
-
-export function setDefaultForecasts() {
-  return (dispatch) => {
-    dispatch(_updateForecasts(weatherService.getDefaultForecasts()));
-  };
-}
-
 
 // ACTIONS
 

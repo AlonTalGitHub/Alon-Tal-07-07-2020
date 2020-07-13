@@ -10,7 +10,6 @@ import {
   setDefaultCity, 
   updateCity,
   updateCurrentWeather, 
-  setDefaultForecasts, 
   updateForecasts, 
   getAutoCompCityList, 
   resetAutoCompCityList } from "../redux/actions";
@@ -125,7 +124,6 @@ const mapDispatchToProps = {
   updateForecasts,
   getAutoCompCityList,
   resetAutoCompCityList,
-  setDefaultForecasts,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

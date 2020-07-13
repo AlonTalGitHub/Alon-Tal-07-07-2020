@@ -34,7 +34,6 @@ const CityCard = (props) => {
   }
 
   const getTemprature = () => {
-    console.log(favorite)
     let temperature = favorite.Temperature.Metric.Value;
     temperature = Math.floor(temperature).toString() + " °C";
     return temperature;
