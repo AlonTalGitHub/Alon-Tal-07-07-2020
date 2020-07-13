@@ -8,7 +8,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from "@material-ui/core/styles";
 import { 
   setDefaultCity, 
-  updateCity, 
+  updateCity,
   updateCurrentWeather, 
   setDefaultForecasts, 
   updateForecasts, 
@@ -67,7 +67,7 @@ const Home = (props) => {
     }
   }
 
-  const submitForm = async (ev, value) => {
+  const submitForm = async (ev) => {
     ev.preventDefault();
     await props.updateCity(selectedCity);
     await props.updateCurrentWeather(selectedCity);
@@ -86,7 +86,7 @@ const Home = (props) => {
             freeSolo
             onChange={handleSelected}
             disableClearable
-            options={props.autoCompCityList.map((option) => option.LocalizedName)}
+            options={(props.autoCompCityList) && props.autoCompCityList.map((option) => option.LocalizedName)}
             renderInput={(params) => (
               <form onSubmit={submitForm} className={classes.form}>
                 <TextField

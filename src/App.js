@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import Favorites from "./pages/Favorites";
 
 export const history = createBrowserHistory();
 
@@ -22,6 +23,7 @@ function App(props) {
         <Router history={history}>
           <Switch>
             <Route path="/" component={Home} exact />
+            <Route path="/favorites" component={Favorites} exact />
           </Switch>
         </Router>
       </Grid>

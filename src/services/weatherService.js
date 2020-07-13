@@ -1,4 +1,5 @@
 import axios from "axios";
+import Swal from 'sweetalert2';
 
 export default {
   getCurrentWeather,
@@ -19,7 +20,11 @@ async function getCurrentWeather(cityKey) {
     const currentWeatherToReturn = currentWeather.data[0];
     return currentWeatherToReturn;
   } catch (err) {
-    console.log('Cannot Connect to weather DB', err)
+    Swal.fire({
+      type: 'error',
+      title: 'You have exceeded 50 AJAX calls per Day',
+      text: 'Please, Try again tomorrow or with another Api Key.'
+    })
     throw err;
   }
 }
@@ -29,7 +34,13 @@ function getAutoCompCityList(query) {
   return ans.then((res) => {
     const { data } = res;
     return data;
-  });
+  }).catch(() => {
+    Swal.fire({
+      type: 'error',
+      title: 'You have exceeded 50 AJAX Calls a Day',
+      text: 'Please, Try again tomorrow or with another Api Key.'
+    })
+  })
 }
 
 async function getForecasts(cityKey) {
@@ -38,7 +49,11 @@ async function getForecasts(cityKey) {
     const forecastsToReturn = forecasts.data.DailyForecasts;
     return forecastsToReturn;
   } catch (err) {
-    console.log('Cannot Connect to forecasts DB', err)
+    Swal.fire({
+      type: 'error',
+      title: 'You have exceeded 50 AJAX Calls a Day',
+      text: 'Please, Try again tomorrow or with another Api Key.'
+    })
     throw err;
   }
 }
@@ -57,24 +72,26 @@ function getDefaultCity() {
   return telAviv[0];
 }
 
-const apiKey = "nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x";
+const apiKey = "rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX";
 
-const _getGeolocationEndpoint = (lat, lon) => {
-    return "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + apiKey + "&q=" + lat + "%2C" + lon
-}
+// nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x
+// rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX
 
 const _getCurrentWeatherEndpoint = (cityKey) => {
-    return "https://dataservice.accuweather.com/currentconditions/v1/" + cityKey + "?apikey=" + apiKey
+  return "https://dataservice.accuweather.com/currentconditions/v1/" + cityKey + "?apikey=" + apiKey
 }
 
 const _getFiveDayForecastEndpoint = (cityKey) => {
-    return "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + cityKey + "?apikey=" + apiKey
+  return "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + cityKey + "?apikey=" + apiKey
 }
 
 const _getAutocompleteEndPoint = (query) => {
-    return "https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=" + apiKey + "&q=" + query
+  return "https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=" + apiKey + "&q=" + query
 }
 
+const _getGeolocationEndpoint = (lat, lon) => {
+  return "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + apiKey + "&q=" + lat + "%2C" + lon
+}
 
 const telAviv = [
   {
