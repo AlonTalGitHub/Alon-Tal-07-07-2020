@@ -14,7 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     margin: "10px",
-
+  },
+  button: {
+    width: "150px",
   },
   card: {
     margin: "10px"
@@ -72,7 +74,7 @@ const Content = (props) => {
           <Typography className={classes.text} variant="h5" component="h2">
             {getTemprature()}
           </Typography>
-          <Button onClick={handleFavorites} variant="contained" color="primary">toggle favorites</Button>
+          <Button className={classes.button} onClick={handleFavorites} variant="contained" color="primary">toggle favorites</Button>
           <Typography className={classes.weatherText} variant="h2">
             {currentWeather.WeatherText}
           </Typography>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,7 +23,7 @@ function App(props) {
         <Router history={history} basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/favorites" component={Favorites} exact />
+            <Route path="/#/favorites" component={Favorites} exact />
           </Switch>
         </Router>
       </Grid>
