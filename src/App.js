@@ -23,7 +23,7 @@ function App(props) {
         <Router history={history} basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/#/favorites" component={Favorites} exact />
+            <Route path="/favorites" component={Favorites} exact />
           </Switch>
         </Router>
       </Grid>

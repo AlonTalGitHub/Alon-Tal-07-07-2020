@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px",
   },
   button: {
-    width: "150px",
+    width: "200px",
   },
   card: {
     margin: "10px"
