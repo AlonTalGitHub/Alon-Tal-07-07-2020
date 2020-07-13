@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "37be23c2f2d4bec7840fd4e684ea0ae0",
+    "revision": "3bd1148de3a62cb14660012a3c1a92d2",
     "url": "/Alon-Tal-07-07-2020/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Alon-Tal-07-07-2020/static/js/2.0052d460.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bd9e9caee8d589d18d52",
-    "url": "/Alon-Tal-07-07-2020/static/js/main.0b845966.chunk.js"
+    "revision": "f249f081f4c860f743b1",
+    "url": "/Alon-Tal-07-07-2020/static/js/main.1c118de7.chunk.js"
   },
   {
     "revision": "d5b6637c327d2cf13653",
