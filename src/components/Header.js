@@ -34,8 +34,8 @@ const Header = (props) => {
       <Toolbar className={classes.toolbar}>
         <Typography className={classes.typography}>Weather App</Typography>
         <List component="nav" aria-label="main manu">
-          <Link href="/" className={classes.link} color="inherit" variant="body1">Home</Link>
-          <Link href="/favorites" className={classes.link} color="inherit" variant="body1">Favorites</Link>
+          <Link href={process.env.PUBLIC_URL + "/"} className={classes.link} color="inherit" variant="body1">Home</Link>
+          <Link href={process.env.PUBLIC_URL + "/favorites"} className={classes.link} color="inherit" variant="body1">Favorites</Link>
         </List>
       </Toolbar>
     </AppBar>

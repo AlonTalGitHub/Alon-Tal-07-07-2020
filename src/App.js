@@ -22,8 +22,8 @@ function App(props) {
       <Grid item container xs={12}>
         <Router history={history}>
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/favorites" component={Favorites} exact />
+            <Route path={process.env.PUBLIC_URL + "/"} component={Home} exact />
+            <Route path={process.env.PUBLIC_URL + "/favorites"} component={Favorites} exact />
           </Switch>
         </Router>
       </Grid>
