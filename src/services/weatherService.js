@@ -57,7 +57,7 @@ async function getForecasts(cityKey) {
 }
 
 function getDefaultCity() {
-  return defaultCity;
+  return defaultCity[0];
 }
 
 const apiKey = "rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX";
@@ -81,7 +81,8 @@ const _getGeolocationEndpoint = (lat, lon) => {
   return "https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + apiKey + "&q=" + lat + "%2C" + lon
 }
 
-const defaultCity = {
+const defaultCity = [
+  {
     "Version": 1,
     "Key": "215854",
     "Type": "City",
@@ -139,4 +140,28 @@ const defaultCity = {
       "Alerts",
       "ForecastConfidence"
     ]
-};
+  },
+  {
+    "LocalObservationDateTime": "2020-07-16T14:36:00+03:00",
+    "EpochTime": 1594899360,
+    "WeatherText": "Sunny",
+    "WeatherIcon": 1,
+    "HasPrecipitation": false,
+    "PrecipitationType": null,
+    "IsDayTime": true,
+    "Temperature": {
+      "Metric": {
+        "Value": 29.8,
+        "Unit": "C",
+        "UnitType": 17
+      },
+      "Imperial": {
+        "Value": 86,
+        "Unit": "F",
+        "UnitType": 18
+      }
+    },
+    "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"
+  },
+];
