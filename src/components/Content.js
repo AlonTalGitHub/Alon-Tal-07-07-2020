@@ -2,11 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import WeatherCard from "./WeatherCard";
-import localService from "../services/localService";
+import FavoriteButton from "./FavoriteButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,9 +13,6 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     margin: "10px",
-  },
-  button: {
-    width: "200px",
   },
   card: {
     margin: "10px"
@@ -41,38 +37,18 @@ const Content = (props) => {
     const temperature = currentWeather.Temperature.Metric.Value;
     return temperature.toString() + " °C";
   }
-
-  const handleFavorites = () => {
-    const favorites = localService.query()
-    if(isFavoriteFound(favorites)) {
-      localService.remove(city.Key)
-    } else {
-      const newFavorite = { ...city, ...currentWeather, isFavorite: true}
-      localService.save(newFavorite)
-    }
-  }
-
-  const isFavoriteFound = (favorites) => {
-    for(var i = 0; i < favorites.length; i++) {
-        if (city.Key === favorites[i].Key) {
-            return true;
-        }
-    }
-    return false;
-  }
-
+  
   return (
     <Grid container direction="column">
       <Grid item container direction="row">
         <Grid item xs={1}></Grid>
         <Grid item container xs={10} direction="column" className={classes.textGrid}>
           <Typography className={classes.text} variant="h5" component="h2">
-            {city.LocalizedName}
+            {city.LocalizedName} <FavoriteButton />
           </Typography>
           <Typography className={classes.text} variant="h5" component="h2">
             {getTemprature()}
           </Typography>
-          <Button className={classes.button} onClick={handleFavorites} variant="contained" color="primary">toggle favorites</Button>
           <Typography className={classes.weatherText} variant="h2">
             {currentWeather.WeatherText}
           </Typography>
@@ -107,4 +83,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Content);
-

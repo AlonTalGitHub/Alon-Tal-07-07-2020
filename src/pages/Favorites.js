@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Favorites = (props) => {
   const classes = useStyles();
-  const favorites = localService.query()
+  const favorites = localService.query();
 
   return (
     <Grid container direction="column">
