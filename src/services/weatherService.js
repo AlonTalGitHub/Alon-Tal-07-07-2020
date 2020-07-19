@@ -60,7 +60,7 @@ function getDefaultCity() {
   return defaultCity[0];
 }
 
-const apiKey = "rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX";
+const apiKey = "nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x";
 
 // nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x
 // rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX

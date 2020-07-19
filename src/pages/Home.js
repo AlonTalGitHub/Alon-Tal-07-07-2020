@@ -18,11 +18,6 @@ import Content from "../components/Content";
 import weatherService from "../services/weatherService";
 
 const useStyles = makeStyles(() => ({
-  home: {
-    margin: "50px auto",
-    maxWidth: "1550px",
-    textAlign: "center",
-  },
   button: {
     width: "150px",
   },
@@ -30,18 +25,8 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     width: "300px",
-    margin: "50px auto", 
+    margin: "30px auto", 
     alignItems: "center",
-  },
-  '@media (max-width:1550px)': {
-    home: {
-      margin: "0px 10px", 
-    },
-  },
-  '@media (max-width:450px)': {
-    home: {
-      margin: "0px 20px", 
-    },
   },
 }));
 

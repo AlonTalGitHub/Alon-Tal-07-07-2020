@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px"
   },
   weatherText: {
-    margin: "30px 60px 60px 60px",
+    margin: "0px 60px 60px 60px",
     textAlign: "center",
   },
   textGrid: {

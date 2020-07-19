@@ -18,7 +18,7 @@ function App(props) {
   const classes = useStyles();
 
   return (
-    <Paper style={{ height: "100vh" }} elevation={0}>
+    <Paper elevation={0}>
       <Grid container direction="column">
         <Grid item xs={12}><Header/></Grid>
         <Grid item container xs={12}>
