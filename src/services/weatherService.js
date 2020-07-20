@@ -20,7 +20,7 @@ async function getCurrentWeather(cityKey) {
   } catch (err) {
     Swal.fire({
       type: 'error',
-      title: 'You have exceeded 50 AJAX calls per Day',
+      title: 'You have exceeded 50 calls to the Server per Day',
       text: 'Please, Try again tomorrow or with another Api Key.'
     })
     throw err;
@@ -35,7 +35,7 @@ function getAutoCompCityList(query) {
   }).catch(() => {
     Swal.fire({
       type: 'error',
-      title: 'You have exceeded 50 AJAX Calls a Day',
+      title: 'You have exceeded 50 calls to the Server per Day',
       text: 'Please, Try again tomorrow or with another Api Key.'
     })
   })
@@ -49,7 +49,7 @@ async function getForecasts(cityKey) {
   } catch (err) {
     Swal.fire({
       type: 'error',
-      title: 'You have exceeded 50 AJAX Calls a Day',
+      title: 'You have exceeded 50 to the Server per Day',
       text: 'Please, Try again tomorrow or with another Api Key.'
     })
     throw err;
