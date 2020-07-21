@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Alon-Tal-07-07-2020/static/js/main.fc8477e0.chunk.js",
-    "main.js.map": "/Alon-Tal-07-07-2020/static/js/main.fc8477e0.chunk.js.map",
+    "main.js": "/Alon-Tal-07-07-2020/static/js/main.7ac19a9d.chunk.js",
+    "main.js.map": "/Alon-Tal-07-07-2020/static/js/main.7ac19a9d.chunk.js.map",
     "runtime-main.js": "/Alon-Tal-07-07-2020/static/js/runtime-main.369b9005.js",
     "runtime-main.js.map": "/Alon-Tal-07-07-2020/static/js/runtime-main.369b9005.js.map",
     "static/js/2.c799cd8e.chunk.js": "/Alon-Tal-07-07-2020/static/js/2.c799cd8e.chunk.js",
     "static/js/2.c799cd8e.chunk.js.map": "/Alon-Tal-07-07-2020/static/js/2.c799cd8e.chunk.js.map",
     "index.html": "/Alon-Tal-07-07-2020/index.html",
-    "precache-manifest.db424bd1eb1f72d13cdf477450db543e.js": "/Alon-Tal-07-07-2020/precache-manifest.db424bd1eb1f72d13cdf477450db543e.js",
+    "precache-manifest.06ef9f084b81021d090d4140cedceb08.js": "/Alon-Tal-07-07-2020/precache-manifest.06ef9f084b81021d090d4140cedceb08.js",
     "service-worker.js": "/Alon-Tal-07-07-2020/service-worker.js",
     "static/js/2.c799cd8e.chunk.js.LICENSE.txt": "/Alon-Tal-07-07-2020/static/js/2.c799cd8e.chunk.js.LICENSE.txt",
     "static/media/NeueHaasDisplay-Roman.woff": "/Alon-Tal-07-07-2020/static/media/NeueHaasDisplay-Roman.127d6b3d.woff"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.369b9005.js",
     "static/js/2.c799cd8e.chunk.js",
-    "static/js/main.fc8477e0.chunk.js"
+    "static/js/main.7ac19a9d.chunk.js"
   ]
 }
