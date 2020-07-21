@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Alon-Tal-07-07-2020/precache-manifest.06ef9f084b81021d090d4140cedceb08.js"
+  "/Alon-Tal-07-07-2020/precache-manifest.5b85cea13b09eb38ded304cb92d6350e.js"
 );
 
 self.addEventListener('message', (event) => {
