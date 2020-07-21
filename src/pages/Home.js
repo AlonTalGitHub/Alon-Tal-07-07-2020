@@ -60,7 +60,6 @@ const Home = (props) => {
 
   const handleSelected = (ev, value) => {
     value = value.split(' (')[0]
-    console.log(value);
     const selected = Object.values(props.autoCompCityList).find(city => city.LocalizedName === value)
     setSelectedCity({ ...selected })
   }
