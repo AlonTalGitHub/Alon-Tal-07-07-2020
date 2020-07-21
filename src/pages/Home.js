@@ -59,6 +59,8 @@ const Home = (props) => {
   }
 
   const handleSelected = (ev, value) => {
+    value = value.split(' (')[0]
+    console.log(value);
     const selected = Object.values(props.autoCompCityList).find(city => city.LocalizedName === value)
     setSelectedCity({ ...selected })
   }
@@ -70,7 +72,9 @@ const Home = (props) => {
             freeSolo
             onChange={handleSelected}
             disableClearable
-            options={(props.autoCompCityList) && props.autoCompCityList.map((option) => option.LocalizedName)}
+            options={(props.autoCompCityList) && props.autoCompCityList.map((option) => {
+              return option.LocalizedName + " (" + option.Country.ID + ")"
+              })}
             renderInput={(params) => (
               <form onSubmit={submitForm} className={classes.form}>
                 <TextField

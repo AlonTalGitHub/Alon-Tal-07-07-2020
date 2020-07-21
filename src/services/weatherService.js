@@ -49,7 +49,7 @@ async function getForecasts(cityKey) {
   } catch (err) {
     Swal.fire({
       type: 'error',
-      title: 'You have exceeded 50 to the Server per Day',
+      title: 'You have exceeded 50 calls to the Server per Day',
       text: 'Please, Try again tomorrow or with another Api Key.'
     })
     throw err;
@@ -60,7 +60,7 @@ function getDefaultCity() {
   return defaultCity[0];
 }
 
-const apiKey = "nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x";
+const apiKey = "rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX";
 
 // nEcFKqO7yXdLTQEIyW86i8zsOZSNlb2x
 // rNwjsLkEBTSSNaB7HrTGjfFCY6NoBhbX
