@@ -29,7 +29,7 @@ const FavoriteButton = (props) => {
       const newFavorite = { ...city, ...currentWeather, isFavorite: true}
       localService.save(newFavorite)
     }
-    setIsFavorite(!isFavorite)
+    setIsFavorite(prevState => !prevState)
   }
   
   return (
