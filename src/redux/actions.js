@@ -7,15 +7,6 @@ export function updateCity(city) {
 }
 
 // THUNK
-export function loadCity() {
-  return (dispatch) => {
-    weatherService.getCity().then((city) => {
-      dispatch(_loadCity(city));
-    }).catch(() => dispatch(_loadCity(null)));
-  };
-}
-
-// THUNK
 export function updateCurrentWeather(city) {
   return async dispatch => {
     try {

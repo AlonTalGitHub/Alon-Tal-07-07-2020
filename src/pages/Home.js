@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 
 import Grid from "@material-ui/core/Grid";
@@ -16,6 +16,7 @@ import {
 
 import Content from "../components/Content";
 import weatherService from "../services/weatherService";
+import { debounce } from "../helpers/functions";
 
 const useStyles = makeStyles(() => ({
   button: {
@@ -33,17 +34,24 @@ const useStyles = makeStyles(() => ({
 const Home = (props) => {
   const classes = useStyles();
   const [selectedCity, setSelectedCity] = useState(weatherService.getDefaultCity())
+  const isFirstRender = useRef(true)
 
   useEffect(() => {
+    if (!isFirstRender.current) {
+      props.updateCity(selectedCity);
+    }
     async function fetchData() {
-      await props.updateForecasts(selectedCity);
       await props.updateCurrentWeather(selectedCity);
+      await props.updateForecasts(selectedCity);
     }
     fetchData();
-  }, []);
+  }, [selectedCity]);
 
-  const handleChange = async (ev) => {
-    let { value } = ev.target
+  useEffect(() => { 
+    isFirstRender.current = false
+  }, [])
+
+  const handleChange = async (value) => {
     if (value !== "") {
       await props.getAutoCompCityList(value)
     } else {
@@ -51,12 +59,7 @@ const Home = (props) => {
     }
   }
 
-  const submitForm = async (ev) => {
-    ev.preventDefault();
-    await props.updateCity(selectedCity);
-    await props.updateCurrentWeather(selectedCity);
-    await props.updateForecasts(selectedCity);
-  }
+  const debouncedHandleChange = debounce((value) => handleChange(value), 500);
 
   const handleSelected = (ev, value) => {
     value = value.split(' (')[0]
@@ -75,17 +78,16 @@ const Home = (props) => {
               return option.LocalizedName + " (" + option.Country.ID + ")"
               })}
             renderInput={(params) => (
-              <form onSubmit={submitForm} className={classes.form}>
+              <form className={classes.form}>
                 <TextField
                   {...params}
                   className={classes.textField}
                   label="Search City"
                   margin="normal"
                   variant="outlined"
-                  onChange={handleChange}
+                  onChange={(ev) => debouncedHandleChange(ev.target.value)}
                   InputProps={{ ...params.InputProps, type: 'search' }}
                 />
-                <Button className={classes.button} type="submit" variant="contained" color="primary">Check Weather</Button>
               </form>
             )}
           />

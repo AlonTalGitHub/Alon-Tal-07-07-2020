@@ -8,10 +8,6 @@ export default {
   getDefaultCity,
 };
 
-// const Axios = axios.create({
-//   withCredentials: true,
-// });
-
 async function getCurrentWeather(cityKey) {
   try {
     const currentWeather = await axios.get(_getCurrentWeatherEndpoint(cityKey));
